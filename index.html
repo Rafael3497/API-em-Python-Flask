@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Missões</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Gerenciador de Missões</h1>
+
+<form id="add-mission-form">
+    <label for="mission-name">Nome:</label><br>
+    <input type="text" id="mission-name" name="mission-name"><br>
+    <label for="launch-date">Data de Lançamento:</label><br>
+    <input type="date" id="launch-date" name="launch-date"><br>
+    <button type="submit">Adicionar Missão</button>
+</form>
+
+<button onclick="getAllMissions()">Listar Todas as Missões</button>
+<button onclick="getMissionDetails(0)">Detalhes da Missão (Exemplo)</button>
+
+<div id="missions-list"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
