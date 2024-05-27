@@ -51,11 +51,12 @@ def update_missao(missao_id):
 @app.route('/api/v1/missoes/<int:missao_id>', methods=['DELETE'])
 def delete_missao(missao_id):
     # Encontre a missão a ser excluída
-    mission_index = next(i for i, missao in enumerate(missoes) if missao['id'] == missao_id)
+    missao_index = next(i for i, missao in enumerate(missoes) if missao['id'] == missao_id)
     
-    if mission_index is not None:
+    if missao_index is not None:
         # Retire a missao da lista
-        del missoes[mission_index]
+        
+        del missoes[missao_index]
         
         return jsonify({'message': 'Missão deletada'}), 200
     else:
